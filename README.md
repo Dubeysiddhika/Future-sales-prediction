@@ -18,3 +18,4 @@ Model: "sequential"
  Non-trainable params: 0 (0.00 B)
 Epoch 1/20
 
+![image](https://github.com/user-attachments/assets/3e53cd2b-246c-4cc2-a012-b4803e2eadf3)
