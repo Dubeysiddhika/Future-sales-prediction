@@ -1,21 +1,35 @@
-# Future-sales-prediction
-To predict the number of units sold using a machine learning model trained on historical data about advertising expenditures.
+🛒 Future Sales Prediction Model – BigMart Dataset
+This project predicts future sales using the BigMart Sales dataset from Kaggle. It utilizes machine learning techniques (XGBoost) to model the relationship between item/store attributes and their sales, with the goal of forecasting sales for the next 3 months.
 
-Use a dataset with past sales data and advertising budgets.
+🔍 Problem Statement
+Retail chains like BigMart need accurate sales forecasting for inventory and supply chain optimization. This model learns patterns from historical sales data to predict future sales values at the item and outlet level.
 
-Model: "sequential"
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
-┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
-│ dense (Dense)                   │ (None, 288)            │        83,232 │
-├─────────────────────────────────┼────────────────────────┼───────────────┤
-│ dense_1 (Dense)                 │ (None, 144)            │        41,616 │
-├─────────────────────────────────┼────────────────────────┼───────────────┤
-│ dense_2 (Dense)                 │ (None, 1)              │           145 │
-└─────────────────────────────────┴────────────────────────┴───────────────┘
- Total params: 124,993 (488.25 KB)
- Trainable params: 124,993 (488.25 KB)
- Non-trainable params: 0 (0.00 B)
-Epoch 1/20
+📂 Dataset
+Source: BigMart Sales Dataset on Kaggle
 
-![image](https://github.com/user-attachments/assets/3e53cd2b-246c-4cc2-a012-b4803e2eadf3)
+Files used: Train.csv (for model training)
+
+Features include:
+
+Item type, weight, MRP
+
+Outlet type, size, location
+
+Historical sales
+
+🧠 Model
+XGBoost Regressor: Chosen for its performance and robustness in tabular data.
+
+Handles missing values and label encodes categorical features.
+
+Trained on 80% of data, validated on 20%.
+
+🔮 Output
+Predicts sales values for the next 3 months by sampling from trained feature space.
+
+Visualization of predicted vs actual sales.
+
+Output shown in console (optionally exportable to CSV/Excel).
+
+📊 Libraries Used
+pandas, scikit-learn, xgboost, matplotlib
